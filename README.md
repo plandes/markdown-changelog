@@ -1,15 +1,16 @@
-# Create and maintain Keep a Changelog based entries
+# Create and maintain changelog
 
 [![MELPA badge][melpa-badge]][melpa-link]
 [![MELPA stable badge][melpa-stable-badge]][melpa-stable-link]
 [![Travis CI Build Status][travis-badge]][travis-link]
 
-WRITE ME
+Create and maintain [Keep a Changelog](http://keepachangelog.com/) changelogs,
+which adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## License
 
-Copyright © 2017 Paul Landes
+Copyright © 2019 Paul Landes
 
 GNU Lesser General Public License, Version 2.0
 
