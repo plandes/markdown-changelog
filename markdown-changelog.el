@@ -29,12 +29,17 @@
 ;;; Commentary:
 
 ;; Create and maintain Keep a Changelog based entries.
-;; See http://keepachangelog.com/ for this specific change log format
+;; See http://keepachangelog.com/ for this specific change log format.  A
+;; nascent changelog is created with `markdown-changelog-new' and
+;; `markdown-changelog-add-release' is used to add a new entry.
 
 ;;; Code:
 
 (require 'subr-x)
 (require 'dash)
+
+(defvar markdown-changelog-buffer-name "CHANGELOG.md"
+  "The default buffer name for the changelog when not the current buffer.")
 
 (defvar markdown-changelog-version-prefix "v"
   "The prefix of the version, which defaults to `v'.")
@@ -51,9 +56,6 @@
   "[%s]: %s/%s%s...%s%s"
   "The format to use to generate release link entries.")
 
-(defvar markdown-changelog-buffer-name "CHANGELOG.md"
-  "The default buffer name for the changelog when not the current buffer.")
-
 (defun markdown-changelog-date-string ()
   "Return a year, month, date format that confirms with `Keep a Changelog'."
   (format-time-string "%Y-%m-%d"))
@@ -67,6 +69,7 @@ If the version can not be determined, return DEFAULT or raise an error."
 	(or default (error "Can't determine git first SHA: %s" res))
       res)))
 
+;;;###autoload
 (defun markdown-changelog-new (url)
   "Create a new changelog buffer with project URL."
   (interactive "sProject URL: ")
@@ -144,7 +147,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     ver))
 
 ;;;###autoload
-(defun markdown-changelog-add-release ()
+(defun markdown-changelog-insert-release ()
   "Add a new release to the change log."
   (interactive)
   (let* ((rinfo (markdown-changelog-release-info))
