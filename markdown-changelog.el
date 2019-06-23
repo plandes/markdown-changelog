@@ -1,4 +1,4 @@
-;;; markdown-changelog.el --- maintain changelog entries
+;;; markdown-changelog.el --- maintain changelog entries  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019 Paul Landes
 
@@ -43,6 +43,10 @@
 
 (defvar markdown-changelog-version-prefix "v"
   "The prefix of the version, which defaults to `v'.")
+
+(defvar markdown-changelog-unreleased-entry-regexp
+  "^#+[ \t]*\\[Unreleased\\]$"
+  "The regular expression of the unreleased entry \(near top).")
 
 (defvar markdown-changelog-unreleased-regex-format
   "^\\[Unreleased\\]: \\(.+\\)\\/%s\\(.+\\)\\.\\.\\.HEAD$"
@@ -94,6 +98,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Initial version
 
 
+<!-- links -->
 \[Unreleased]: %s%s0.0.1...HEAD
 \[0.0.1]: %s%s%s...%s0.0.1\n"
 			 (format url
@@ -155,11 +160,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 	 (url (cl-second rinfo))
 	 (prev-ver (cl-third rinfo))
 	 (next-ver (markdown-changelog-version-increment prev-ver))
-	 (regex (format markdown-changelog-release-regex prev-ver)))
+	 (regex (format markdown-changelog-release-regex prev-ver))
+	 user-pos)
     (with-current-buffer (markdown-changelog-buffer)
       (save-excursion
+	(goto-char (point-min))
+	(when (search-forward-regexp markdown-changelog-unreleased-entry-regexp
+				     nil t)
+	  (insert "\n\n\n"))
 	(insert (format "## [%s] - %s" next-ver
 			(markdown-changelog-date-string)))
+	(beginning-of-line)
+	(forward-line 1)
+	(setq user-pos (point))
 	(goto-char (point-min))
 	(if (search-forward-regexp regex nil t)
 	    (substring-no-properties (match-string 1))
@@ -179,8 +192,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 			"Unreleased" url
 			markdown-changelog-version-prefix
 			next-ver "" "HEAD")))
-      (end-of-line)
-      (newline))))
+      (goto-char user-pos))))
 
 (provide 'markdown-changelog)
 
