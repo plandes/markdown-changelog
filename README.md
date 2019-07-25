@@ -1,4 +1,4 @@
-# Create and maintain changelog
+# Create and maintain changelogs.
 
 [![MELPA badge][melpa-badge]][melpa-link]
 [![MELPA stable badge][melpa-stable-badge]][melpa-stable-link]

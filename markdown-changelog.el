@@ -1,11 +1,11 @@
-;;; markdown-changelog.el --- maintain changelog entries  -*- lexical-binding: t; -*-
+;;; markdown-changelog.el --- Maintain changelog entries.  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019 Paul Landes
 
 ;; Version: 0.1
 ;; Author: Paul Landes
 ;; Maintainer: Paul Landes
-;; Keywords: markdown changelog
+;; Keywords: markdown changelog files
 ;; URL: https://github.com/plandes/markdown-changelog
 ;; Package-Requires: ((emacs "26") (dash "2.13.0"))
 
