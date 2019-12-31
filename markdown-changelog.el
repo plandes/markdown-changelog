@@ -1,6 +1,6 @@
 ;;; markdown-changelog.el --- Maintain changelog entries  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019 Paul Landes
+;; Copyright (C) 2019 - 2020 Paul Landes
 
 ;; Version: 0.1
 ;; Author: Paul Landes
