@@ -8,7 +8,7 @@ Create and maintain [Keep a Changelog] changelogs, which adheres to [Semantic
 Versioning].  This library creates a new change log and adds releases to the
 change long by keeping the markdown links consistent with changes.  These links
 then (can) point back to GitHub as version diffs that show the commit history
-changes for the respective release.  See the [motivation](#motivation) section.
+changes for the respective release.
 
 
 ## Motivation
