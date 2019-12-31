@@ -1,4 +1,4 @@
-;;; markdown-changelog.el --- Maintain changelog entries.  -*- lexical-binding: t; -*-
+;;; markdown-changelog.el --- Maintain changelog entries  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019 Paul Landes
 
@@ -32,6 +32,9 @@
 ;; See http://keepachangelog.com/ for this specific change log format.  A
 ;; nascent changelog is created with `markdown-changelog-new' and
 ;; `markdown-changelog-add-release' is used to add a new entry.
+;;
+;; For more information and motivation for markdown changelogs see
+;; https://github.com/plandes/markdown-changelog#motivation
 
 ;;; Code:
 
