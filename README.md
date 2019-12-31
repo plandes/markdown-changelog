@@ -50,5 +50,5 @@ GNU Lesser General Public License, Version 2.0
 [travis-link]: https://travis-ci.org/plandes/markdown-changelog
 [travis-badge]: https://travis-ci.org/plandes/markdown-changelog.svg?branch=master
 
-[Keep a Changelog]: http://keepachangelog.com/
-[Semantic Versioning]: http://semver.org/
+[Keep a Changelog]: https://keepachangelog.com/
+[Semantic Versioning]: https://semver.org/

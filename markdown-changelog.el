@@ -29,7 +29,7 @@
 ;;; Commentary:
 
 ;; Create and maintain Keep a Changelog based entries.
-;; See http://keepachangelog.com/ for this specific change log format.  A
+;; See https://keepachangelog.com/ for this specific change log format.  A
 ;; nascent changelog is created with `markdown-changelog-new' and
 ;; `markdown-changelog-add-release' is used to add a new entry.
 ;;
@@ -88,8 +88,8 @@ If the version can not be determined, return DEFAULT or raise an error."
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
-and this project adheres to [Semantic Versioning](http://semver.org/).
+The format is based on [Keep a Changelog](https://keepachangelog.com/)
+and this project adheres to [Semantic Versioning](https://semver.org/).
 
 
 ## [Unreleased]
