@@ -82,7 +82,7 @@ If the version can not be determined, return DEFAULT or raise an error."
   (interactive "sProject URL: ")
   (if (string-match "\\/$" url)
       (setq url (substring url 0 (1- (length url)))))
-  (setq url (format "%s/current/" url))
+  (setq url (format "%s/compare/" url))
   (let ((first-content (-> "\
 # Change Log
 
