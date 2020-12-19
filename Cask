@@ -1,6 +1,6 @@
 ;; -*- emacs-lisp -*-
 (source gnu)
-(source melpa)
+(source melpa-stable)
 
 (package-file "markdown-changelog.el")
 (depends-on "dash" "2.13.0")
