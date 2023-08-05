@@ -2,7 +2,7 @@
 
 [![MELPA badge][melpa-badge]][melpa-link]
 [![MELPA stable badge][melpa-stable-badge]][melpa-stable-link]
-[![Travis CI Build Status][travis-badge]][travis-link]
+[![Build Status][build-badge]][build-link]
 
 Create and maintain [Keep a Changelog] changelogs, which adheres to [Semantic
 Versioning].  This library creates a new change log and adds releases to the
@@ -52,8 +52,8 @@ GNU Lesser General Public License, Version 2.0
 [melpa-stable-link]: https://stable.melpa.org/#/markdown-changelog
 [melpa-badge]: https://melpa.org/packages/markdown-changelog-badge.svg
 [melpa-stable-badge]: https://stable.melpa.org/packages/markdown-changelog-badge.svg
-[travis-link]: https://travis-ci.org/plandes/markdown-changelog
-[travis-badge]: https://travis-ci.org/plandes/markdown-changelog.svg?branch=master
+[build-badge]: https://github.com/plandes/markdown-changelog/workflows/CI/badge.svg
+[build-link]: https://github.com/plandes/markdown-changelog/actions
 
 [Keep a Changelog]: https://keepachangelog.com/
 [Semantic Versioning]: https://semver.org/
