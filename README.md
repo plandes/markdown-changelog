@@ -35,6 +35,11 @@ A nascent changelog is created with `markdown-changelog-new` and
 `markdown-changelog-add-release` is used to add a new entry.
 
 
+## Changelog
+
+An extensive changelog is available [here](CHANGELOG.md).
+
+
 ## License
 
 Copyright © 2019 - 2020 Paul Landes
